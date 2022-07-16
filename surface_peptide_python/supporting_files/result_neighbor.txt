@@ -1,0 +1,5 @@
+Not enough residue that fulfilled the requirement
+Sequence =STRNDLDF
+96 211 209 210 208 206 207 212 
+
+CA 8 A
