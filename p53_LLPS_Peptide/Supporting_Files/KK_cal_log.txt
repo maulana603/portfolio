@@ -1,0 +1,213 @@
+#eir_calculation
+perl eir_calculation.pl KK_original_pot.txt > KK_eir.txt
+
+#calculation only from eij with no neighbor interaction
+perl KK_cal_seq_pred_eij_neib_free.pl MJ_original_pot_seq.txt KK_original_pot.txt p53_C_367_393.txt 10 > rev_calc_KK_original_exp_eij_NI_free_out_pred_10.txt
+
+#calculation only from eij with neighbor interaction
+perl KK_cal_seq_pred_eij_neib_int.pl MJ_original_pot_seq.txt KK_original_pot.txt p53_C_367_393.txt 10 > rev_calc_KK_original_exp_eij_NI_int_out_pred_10.txt
+perl KK_cal_seq_pred_eij_neib_int_modif.pl MJ_original_pot_seq.txt KK_original_pot.txt p53_C_367_393.txt 10 > rev_calc_KK_original_exp_eij_NI_int_modif_out_pred_10.txt
+
+#eij-eir-ejr+err without interaction
+perl KK_cal_seq_pred_11r_neib_free.pl MJ_original_pot_seq.txt KK_original_pot.txt KK_eir.txt p53_C_367_393.txt 13 > rev_calc_KK_original_exp_Upper_NI_free_out_pred_13.txt
+perl KK_cal_seq_pred_11r_neib_free.pl MJ_original_pot_seq.txt KK_original_pot.txt KK_eir.txt p53_C_367_393.txt 16 > rev_calc_KK_original_exp_Upper_NI_free_out_pred_16.txt
+
+#eij-eir-ejr+err with interaction
+perl KK_cal_seq_pred_11r_neib_int_modif.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt FUS.txt 10 > rev_calc_KK_original_exp_Upper_NI_int_modif_out_pred_10.txt
+perl KK_cal_seq_pred_11r_neib_int_modif.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt FUS.txt 11 > rev_calc_KK_original_exp_Upper_NI_int_modif_out_pred_11.txt
+perl KK_cal_seq_pred_11r_neib_int_modif.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt FUS.txt 12 > rev_calc_KK_original_exp_Upper_NI_int_modif_out_pred_12.txt
+perl KK_cal_seq_pred_11r_neib_int_modif.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt p53_N_1_94.txt 13 > rev_calc_KK_original_exp_Upper_NI_int_modif_out_pred_13.txt
+perl KK_cal_seq_pred_11r_neib_int_modif.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt FUS.txt 14 > rev_calc_KK_original_exp_Upper_NI_int_modif_out_pred_14.txt
+perl KK_cal_seq_pred_11r_neib_int_modif.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt FUS.txt 15 > rev_calc_KK_original_exp_Upper_NI_int_modif_out_pred_15.txt
+perl KK_cal_seq_pred_11r_neib_int_modif.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt FUS.txt 16 > rev_calc_KK_original_exp_Upper_NI_int_modif_out_pred_16.txt
+perl KK_cal_seq_pred_11r_neib_int_modif.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt FUS.txt 17 > rev_calc_KK_original_exp_Upper_NI_int_modif_out_pred_17.txt
+perl KK_cal_seq_pred_11r_neib_int_modif.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt FUS.txt 18 > rev_calc_KK_original_exp_Upper_NI_int_modif_out_pred_18.txt
+perl KK_cal_seq_pred_11r_neib_int_modif.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt FUS.txt 19 > rev_calc_KK_original_exp_Upper_NI_int_modif_out_pred_19.txt
+perl KK_cal_seq_pred_11r_neib_int_modif.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt FUS.txt 20 > rev_calc_KK_original_exp_Upper_NI_int_modif_out_pred_20.txt
+
+perl KK_cal_seq_pred_11r_neib_int.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt FUS.txt 10 > rev_calc_KK_original_exp_Upper_NI_int_out_pred_10.txt
+perl KK_cal_seq_pred_11r_neib_int.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt FUS.txt 11 > rev_calc_KK_original_exp_Upper_NI_int_out_pred_11.txt
+perl KK_cal_seq_pred_11r_neib_int.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt FUS.txt 12 > rev_calc_KK_original_exp_Upper_NI_int_out_pred_12.txt
+perl KK_cal_seq_pred_11r_neib_int.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt FUS.txt 13 > rev_calc_KK_original_exp_Upper_NI_int_out_pred_13.txt
+perl KK_cal_seq_pred_11r_neib_int.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt FUS.txt 14 > rev_calc_KK_original_exp_Upper_NI_int_out_pred_14.txt
+perl KK_cal_seq_pred_11r_neib_int.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt FUS.txt 15 > rev_calc_KK_original_exp_Upper_NI_int_out_pred_15.txt
+perl KK_cal_seq_pred_11r_neib_int.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt FUS.txt 16 > rev_calc_KK_original_exp_Upper_NI_int_out_pred_16.txt
+perl KK_cal_seq_pred_11r_neib_int.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt FUS.txt 17 > rev_calc_KK_original_exp_Upper_NI_int_out_pred_17.txt
+perl KK_cal_seq_pred_11r_neib_int.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt FUS.txt 18 > rev_calc_KK_original_exp_Upper_NI_int_out_pred_18.txt
+perl KK_cal_seq_pred_11r_neib_int.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt FUS.txt 19 > rev_calc_KK_original_exp_Upper_NI_int_out_pred_19.txt
+perl KK_cal_seq_pred_11r_neib_int.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt FUS.txt 20 > rev_calc_KK_original_exp_Upper_NI_int_out_pred_20.txt
+
+perl MJ_cal_seq_pred_11r_neib_free_esp.pl MJ_original_pot_seq.txt MJ_original_pot.txt MJ_original_pot_eir.txt p53_N_1_94.txt FLp53.txt 10 > MJ_original_exp_Upper_NI_esp_pred_10.txt
+perl MJ_cal_seq_pred_11r_neib_free_esp.pl MJ_original_pot_seq.txt MJ_original_pot.txt MJ_original_pot_eir.txt p53_N_1_94.txt FLp53.txt 16 > MJ_original_exp_Upper_NI_esp_pred_16.txt
+perl MJ_cal_seq_pred_11r_neib_int_esp.pl MJ_original_pot_seq.txt MJ_original_pot.txt MJ_original_pot_eir.txt p53_N_1_94.txt FLp53.txt 10 > MJ_original_exp_Upper_NI_int_esp_pred_10.txt
+perl MJ_cal_seq_pred_11r_neib_int_esp.pl MJ_original_pot_seq.txt MJ_original_pot.txt MJ_original_pot_eir.txt p53_N_1_94.txt FLp53.txt 16 > MJ_original_exp_Upper_NI_int_esp_pred_16.txt
+perl KK_cal_seq_pred_11r_neib_free_esp.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt p53_N_1_94.txt FLp53.txt 10 > KK_original_exp_Upper_NI_esp_pred_10.txt
+perl KK_cal_seq_pred_11r_neib_free_esp.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt p53_N_1_94.txt FLp53.txt 16 > KK_original_exp_Upper_NI_esp_pred_16.txt
+perl KK_cal_seq_pred_11r_neib_int_esp.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt p53_N_1_94.txt FLp53.txt 10 > KK_original_exp_Upper_NI_int_esp_pred_10.txt
+perl KK_cal_seq_pred_11r_neib_int_esp.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt p53_N_1_94.txt FLp53.txt 16 > KK_original_exp_Upper_NI_int_esp_pred_16.txt
+
+perl MJ_cal_seq_pred_11r_neib_free_esp_scd.pl MJ_original_pot_seq.txt MJ_original_pot.txt MJ_original_pot_eir.txt p53_N_1_94.txt FLp53.txt 10 > MJ_original_exp_Upper_NI_esp_scd_pred_10.txt
+perl MJ_cal_seq_pred_11r_neib_free_esp_scd.pl MJ_original_pot_seq.txt MJ_original_pot.txt MJ_original_pot_eir.txt p53_N_1_94.txt FLp53.txt 16 > MJ_original_exp_Upper_NI_esp_scd_pred_16.txt
+perl MJ_cal_seq_pred_11r_neib_int_esp_scd.pl MJ_original_pot_seq.txt MJ_original_pot.txt MJ_original_pot_eir.txt p53_N_1_94.txt FLp53.txt 10 > MJ_original_exp_Upper_NI_int_scd_esp_pred_10.txt
+perl MJ_cal_seq_pred_11r_neib_int_esp_scd.pl MJ_original_pot_seq.txt MJ_original_pot.txt MJ_original_pot_eir.txt p53_N_1_94.txt FLp53.txt 16 > MJ_original_exp_Upper_NI_int_scd_esp_pred_16.txt
+perl KK_cal_seq_pred_11r_neib_free_esp_scd.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt p53_N_1_94.txt FLp53.txt 10 > KK_original_exp_Upper_NI_esp_scd_pred_10.txt
+perl KK_cal_seq_pred_11r_neib_free_esp_scd.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt p53_N_1_94.txt FLp53.txt 16 > KK_original_exp_Upper_NI_esp_scd_pred_16.txt
+perl KK_cal_seq_pred_11r_neib_int_esp_scd.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt p53_N_1_94.txt FLp53.txt 10 > KK_original_exp_Upper_NI_int_esp_scd_pred_10.txt
+perl KK_cal_seq_pred_11r_neib_int_esp_scd.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt p53_N_1_94.txt FLp53.txt 16 > KK_original_exp_Upper_NI_int_esp_scd_pred_16.txt
+
+perl MJ_cal_seq_pred_11r_neib_int_esp_scd_+.pl MJ_original_pot_seq.txt MJ_original_pot.txt MJ_original_pot_eir.txt p53_N_1_94.txt p53_N_1_94.txt 16 > MJ_original_exp_Upper_NI_int_scd_esp_pred_16+.txt
+
+KK_OT_method2.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt p53_N_1_94.txt 10 10 50 0.3 0.3 > test.txt
+
+
+#FUS
+perl seq_pred_neib_free_esp.pl MJ_original_pot_seq.txt MJ_original_pot.txt MJ_original_pot_eir.txt FUS.txt 10 > FUS_MJOO_10.txt
+perl seq_pred_neib_free_esp.pl MJ_original_pot_seq.txt MJ_original_pot.txt MJ_original_pot_eir.txt FUS.txt 16 > FUS_MJOO_16.txt
+perl seq_pred_neib_int_esp.pl MJ_original_pot_seq.txt MJ_original_pot.txt MJ_original_pot_eir.txt FUS.txt 10 > FUS_MJOT_10.txt
+perl seq_pred_neib_int_esp.pl MJ_original_pot_seq.txt MJ_original_pot.txt MJ_original_pot_eir.txt FUS.txt 16 > FUS_MJOT_16.txt
+perl seq_pred_neib_free_esp.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt FUS.txt 10 > FUS_KKOO_10.txt
+perl seq_pred_neib_free_esp.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt FUS.txt 16 > FUS_KKOO_16.txt
+perl seq_pred_neib_int_esp.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt FUS.txt 10 > FUS_KKOT_10.txt
+perl seq_pred_neib_int_esp.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt FUS.txt 16 > FUS_KKOT_16.txt
+
+#Prediction of sequence with several level, including esp calculation
+perl MJ_cal_seq_pred_11r_neib_free_level_esp.pl MJ_original_pot_seq.txt MJ_original_pot.txt MJ_original_pot_eir.txt p53_N_1_94.txt FLp53.txt 10 50 > MJOO10_50level_esp.txt
+perl MJ_cal_seq_pred_11r_neib_free_level_esp.pl MJ_original_pot_seq.txt MJ_original_pot.txt MJ_original_pot_eir.txt p53_N_1_94.txt FLp53.txt 16 50 > MJOO16_50level_esp.txt
+perl MJ_cal_seq_pred_11r_neib_int_level_esp.pl MJ_original_pot_seq.txt MJ_original_pot.txt MJ_original_pot_eir.txt p53_N_1_94.txt FLp53.txt 10 50 > MJOT10_50level_esp.txt
+perl MJ_cal_seq_pred_11r_neib_int_level_esp.pl MJ_original_pot_seq.txt MJ_original_pot.txt MJ_original_pot_eir.txt p53_N_1_94.txt FLp53.txt 16 50 > MJOT16_50level_esp.txt
+perl KK_cal_seq_pred_11r_neib_free_level_esp.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt p53_N_1_94.txt FLp53.txt 10 50 > KKOO10_50level_esp.txt
+perl KK_cal_seq_pred_11r_neib_free_level_esp.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt p53_N_1_94.txt FLp53.txt 16 50 > KKOO16_50level_esp.txt
+perl KK_cal_seq_pred_11r_neib_int_level_esp.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt p53_N_1_94.txt FLp53.txt 10 50 > KKOT10_50level_esp.txt
+perl KK_cal_seq_pred_11r_neib_int_level_esp.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt p53_N_1_94.txt FLp53.txt 16 50 > KKOT16_50level_esp.txt
+
+
+full amino acids
+perl KK_cal_seq_pred_11r_neib_int_full.pl MJ_original_pot_seq.txt KK_full_pot.txt KK_full_eir.txt p53_N_1_94.txt 10 > rev_calc_KK_full_exp_Upper_NI_int_out_pred_10.txt
+perl KK_cal_seq_pred_11r_neib_int_full.pl MJ_original_pot_seq.txt KK_full_pot.txt KK_full_eir.txt p53_N_1_94.txt 11 > rev_calc_KK_full_exp_Upper_NI_int_out_pred_11.txt
+perl KK_cal_seq_pred_11r_neib_int_full.pl MJ_original_pot_seq.txt KK_full_pot.txt KK_full_eir.txt p53_N_1_94.txt 12 > rev_calc_KK_full_exp_Upper_NI_int_out_pred_12.txt
+perl KK_cal_seq_pred_11r_neib_int_full.pl MJ_original_pot_seq.txt KK_full_pot.txt KK_full_eir.txt p53_N_1_94.txt 13 > rev_calc_KK_full_exp_Upper_NI_int_out_pred_13.txt
+perl KK_cal_seq_pred_11r_neib_int_full.pl MJ_original_pot_seq.txt KK_full_pot.txt KK_full_eir.txt p53_N_1_94.txt 14 > rev_calc_KK_full_exp_Upper_NI_int_out_pred_14.txt
+perl KK_cal_seq_pred_11r_neib_int_full.pl MJ_original_pot_seq.txt KK_full_pot.txt KK_full_eir.txt p53_N_1_94.txt 15 > rev_calc_KK_full_exp_Upper_NI_int_out_pred_15.txt
+perl KK_cal_seq_pred_11r_neib_int_full.pl MJ_original_pot_seq.txt KK_full_pot.txt KK_full_eir.txt p53_N_1_94.txt 16 > rev_calc_KK_full_exp_Upper_NI_int_out_pred_16.txt
+perl KK_cal_seq_pred_11r_neib_int_full.pl MJ_original_pot_seq.txt KK_full_pot.txt KK_full_eir.txt p53_N_1_94.txt 17 > rev_calc_KK_full_exp_Upper_NI_int_out_pred_17.txt
+perl KK_cal_seq_pred_11r_neib_int_full.pl MJ_original_pot_seq.txt KK_full_pot.txt KK_full_eir.txt p53_N_1_94.txt 18 > rev_calc_KK_full_exp_Upper_NI_int_out_pred_18.txt
+perl KK_cal_seq_pred_11r_neib_int_full.pl MJ_original_pot_seq.txt KK_full_pot.txt KK_full_eir.txt p53_N_1_94.txt 19 > rev_calc_KK_full_exp_Upper_NI_int_out_pred_19.txt
+perl KK_cal_seq_pred_11r_neib_int_full.pl MJ_original_pot_seq.txt KK_full_pot.txt KK_full_eir.txt p53_N_1_94.txt 20 > rev_calc_KK_full_exp_Upper_NI_int_out_pred_20.txt
+
+#analysis
+perl KK_cal_seq_anal_11r.pl MJ_original_pot_seq.txt KK_original_pot.txt KK_eir.txt p53_C_293_393.txt Cul7_386-400.txt > R11_MJ_original_pot_out_des_Cul7_386-400.txt
+perl KK_cal_seq_anal_11r.pl MJ_original_pot_seq.txt KK_original_pot.txt KK_eir.txt p53_C_293_393.txt WS100B_61_75.txt > R11_MJ_original_pot_out_des_WS100B_61_75.txt
+perl KK_cal_seq_anal_11r.pl MJ_original_pot_seq.txt KK_original_pot.txt KK_eir.txt p53_C_293_393.txt PKCa_281_295.txt > R11_MJ_original_pot_out_des_PKCa_281_295.txt
+perl KK_cal_seq_anal_11r.pl MJ_original_pot_seq.txt KK_original_pot.txt KK_eir.txt p53_C_293_393.txt Wmot2_266_280.txt > R11_MJ_original_pot_out_des_Wmot2_266_280.txt
+perl KK_cal_seq_anal_11r.pl MJ_original_pot_seq.txt KK_original_pot.txt KK_eir.txt p53_C_293_393.txt WS100B_81_92.txt > R11_MJ_original_pot_out_des_WS100B_81_92.txt
+perl KK_cal_seq_anal_11r.pl MJ_original_pot_seq.txt KK_original_pot.txt KK_eir.txt p53_C_293_3KK_original_pot.txt KK_eir.txt93.txt WPKCa_641_655.txt > R11_MJ_original_pot_out_des_WPKCa_641_655.txt
+perl KK_cal_seq_anal_11r.pl MJ_original_pot_seq.txt KK_original_pot.txt KK_eir.txt p53_C_293_393.txt PKCa_271_285.txt > R11_MJ_original_pot_out_des_PKCa_271_285.txt
+perl KK_cal_seq_anal_11r.pl MJ_original_pot_seq.txt KK_original_pot.txt KK_eir.txt p53_C_293_393.txt S100A4_61_75.txt > R11_MJ_original_pot_out_des_S100A4_61_75.txt
+
+perl KK_cal_seq_anal_11r_neib_int.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt p53_C_293_393.txt Cul7_386-400.txt > NI_R11_MJ_original_pot_out_des_Cul7_386-400.txt
+perl KK_cal_seq_anal_11r_neib_int.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt p53_C_293_393.txt WS100B_61_75.txt > NI_R11_MJ_original_pot_out_des_WS100B_61_75.txt
+perl KK_cal_seq_anal_11r_neib_int.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt p53_C_293_393.txt PKCa_281_295.txt > NI_R11_MJ_original_pot_out_des_PKCa_281_295.txt
+perl KK_cal_seq_anal_11r_neib_int.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt p53_C_293_393.txt Wmot2_266_280.txt > NI_R11_MJ_original_pot_out_des_Wmot2_266_280.txt
+perl KK_cal_seq_anal_11r_neib_int.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt p53_C_293_393.txt WS100B_81_92.txt > NI_R11_MJ_original_pot_out_des_WS100B_81_92.txt
+perl KK_cal_seq_anal_11r_neib_int.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt p53_C_293_393.txt WPKCa_641_655.txt > NI_R11_MJ_original_pot_out_des_WPKCa_641_655.txt
+perl KK_cal_seq_anal_11r_neib_int.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt p53_C_293_393.txt PKCa_271_285.txt > NI_R11_MJ_original_pot_out_des_PKCa_271_285.txt
+perl KK_cal_seq_anal_11r_neib_int.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt p53_C_293_393.txt S100A4_61_75.txt > NI_R11_MJ_original_pot_out_des_S100A4_61_75.txt
+
+perl KK_cal_seq_anal_11r_neib_int_full.pl MJ_original_pot_seq.txt KK_full_pot.txt KK_full_eir.txt p53_C_293_393.txt Cul7_386-400.txt > NIF_R11_MJ_original_pot_out_des_Cul7_386-400.txt
+perl KK_cal_seq_anal_11r_neib_int_full.pl MJ_original_pot_seq.txt KK_full_pot.txt KK_full_eir.txt p53_C_293_393.txt WS100B_61_75.txt > NIF_R11_MJ_original_pot_out_des_WS100B_61_75.txt
+perl KK_cal_seq_anal_11r_neib_int_full.pl MJ_original_pot_seq.txt KK_full_pot.txt KK_full_eir.txt p53_C_293_393.txt PKCa_281_295.txt > NIF_R11_MJ_original_pot_out_des_PKCa_281_295.txt
+perl KK_cal_seq_anal_11r_neib_int_full.pl MJ_original_pot_seq.txt KK_full_pot.txt KK_full_eir.txt p53_C_293_393.txt Wmot2_266_280.txt > NIF_R11_MJ_original_pot_out_des_Wmot2_266_280.txt
+perl KK_cal_seq_anal_11r_neib_int_full.pl MJ_original_pot_seq.txt KK_full_pot.txt KK_full_eir.txt p53_C_293_393.txt WS100B_81_92.txt > NIF_R11_MJ_original_pot_out_des_WS100B_81_92.txt
+perl KK_cal_seq_anal_11r_neib_int_full.pl MJ_original_pot_seq.txt KK_full_pot.txt KK_full_eir.txt p53_C_293_393.txt WPKCa_641_655.txt > NIF_R11_MJ_original_pot_out_des_WPKCa_641_655.txt
+perl KK_cal_seq_anal_11r_neib_int_full.pl MJ_original_pot_seq.txt KK_full_pot.txt KK_full_eir.txt p53_C_293_393.txt PKCa_271_285.txt > NIF_R11_MJ_original_pot_out_des_PKCa_271_285.txt
+perl KK_cal_seq_anal_11r_neib_int_full.pl MJ_original_pot_seq.txt KK_full_pot.txt KK_full_eir.txt p53_C_293_393.txt S100A4_61_75.txt > NIF_R11_MJ_original_pot_out_des_S100A4_61_75.txt
+
+perl KK_cal_seq_anal_11r_neib_int_edit.pl MJ_original_pot_seq.txt KK_original_pot.txt KK_eir.txt p53_C_293_393.txt Cul7_386-400.txt > edit_R11_MJ_original_pot_out_des_Cul7_386-400.txt
+perl KK_cal_seq_anal_11r_neib_int_edit.pl MJ_original_pot_seq.txt KK_original_pot.txt KK_eir.txt p53_C_293_393.txt WS100B_61_75.txt > edit_R11_MJ_original_pot_out_des_WS100B_61_75.txt
+perl KK_cal_seq_anal_11r_neib_int_edit.pl MJ_original_pot_seq.txt KK_original_pot.txt KK_eir.txt p53_C_293_393.txt PKCa_281_295.txt > edit_R11_MJ_original_pot_out_des_PKCa_281_295.txt
+perl KK_cal_seq_anal_11r_neib_int_edit.pl MJ_original_pot_seq.txt KK_original_pot.txt KK_eir.txt p53_C_293_393.txt Wmot2_266_280.txt > edit_R11_MJ_original_pot_out_des_Wmot2_266_280.txt
+perl KK_cal_seq_anal_11r_neib_int_edit.pl MJ_original_pot_seq.txt KK_original_pot.txt KK_eir.txt p53_C_293_393.txt WS100B_81_92.txt > edit_R11_MJ_original_pot_out_des_WS100B_81_92.txt
+perl KK_cal_seq_anal_11r_neib_int_edit.pl MJ_original_pot_seq.txt KK_original_pot.txt KK_eir.txt p53_C_293_393.txt WPKCa_641_655.txt > edit_R11_MJ_original_pot_out_des_WPKCa_641_655.txt
+perl KK_cal_seq_anal_11r_neib_int_edit.pl MJ_original_pot_seq.txt KK_original_pot.txt KK_eir.txt p53_C_293_393.txt PKCa_271_285.txt > edit_R11_MJ_original_pot_out_des_PKCa_271_285.txt
+perl KK_cal_seq_anal_11r_neib_int_edit.pl MJ_original_pot_seq.txt KK_original_pot.txt KK_eir.txt p53_C_293_393.txt S100A4_61_75.txt > edit_R11_MJ_original_pot_out_des_S100A4_61_75.txt
+
+perl MJ_cal_seq_anal_11r_neib_int.pl MJ_original_pot_seq.txt MJ_original_pot.txt MJ_original_pot_eir.txt p53_C_357_393.txt DP6_1.txt > DP6_1_analysis_0.txt
+perl MJ_cal_seq_anal_11r_neib_int.pl MJ_original_pot_seq.txt MJ_original_pot.txt MJ_original_pot_eir.txt p53_C_357_393.txt DP6_2.txt > DP6_2_analysis_0.txt
+perl MJ_cal_seq_anal_11r.pl MJ_original_pot_seq.txt MJ_original_pot.txt MJ_original_pot_eir.txt p53_N_1_94.txt MJOO10_1.txt > MJOO10_1_analysis_1.txt
+perl MJ_cal_seq_anal_11r.pl MJ_original_pot_seq.txt MJ_original_pot.txt MJ_original_pot_eir.txt p53_N_1_94.txt MJOO10_2.txt > MJOO10_2_analysis_1.txt
+perl MJ_cal_seq_anal_11r.pl MJ_original_pot_seq.txt MJ_original_pot.txt MJ_original_pot_eir.txt p53_N_1_94.txt MJOO16_1.txt > MJOO16_1_analysis_1.txt
+perl MJ_cal_seq_anal_11r.pl MJ_original_pot_seq.txt MJ_original_pot.txt MJ_original_pot_eir.txt p53_N_1_94.txt MJOO16_2.txt > MJOO16_2_analysis_1.txt
+perl MJ_cal_seq_anal_11r_neib_int.pl MJ_original_pot_seq.txt MJ_original_pot.txt MJ_original_pot_eir.txt p53_N_1_94.txt MJOT10_1.txt > MJOT10_1_analysis_1.txt
+perl MJ_cal_seq_anal_11r_neib_int.pl MJ_original_pot_seq.txt MJ_original_pot.txt MJ_original_pot_eir.txt p53_N_1_94.txt MJOT10_2.txt > MJOT10_2_analysis_1.txt
+perl MJ_cal_seq_anal_11r_neib_int.pl MJ_original_pot_seq.txt MJ_original_pot.txt MJ_original_pot_eir.txt p53_N_1_94.txt MJOT16_1.txt > MJOT16_1_analysis_1.txt
+perl MJ_cal_seq_anal_11r_neib_int.pl MJ_original_pot_seq.txt MJ_original_pot.txt MJ_original_pot_eir.txt p53_N_1_94.txt MJOT16_2.txt > MJOT16_2_analysis_1.txt
+perl KK_cal_seq_anal_11r.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt p53_N_1_94.txt KKOO10_1.txt > KKOO10_1_analysis_1.txt
+perl KK_cal_seq_anal_11r.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt p53_N_1_94.txt KKOO10_2.txt > KKOO10_2_analysis_1.txt
+perl KK_cal_seq_anal_11r.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt p53_N_1_94.txt KKOO16_1.txt > KKOO16_1_analysis_1.txt
+perl KK_cal_seq_anal_11r.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt p53_N_1_94.txt KKOO16_2.txt > KKOO16_2_analysis_1.txt
+perl KK_cal_seq_anal_11r_neib_int.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt p53_N_1_94.txt KKOT10_1.txt > KKOT10_1_analysis_1.txt
+perl KK_cal_seq_anal_11r_neib_int.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt p53_N_1_94.txt KKOT10_2.txt > KKOT10_2_analysis_1.txt
+perl KK_cal_seq_anal_11r_neib_int.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt p53_N_1_94.txt KKOT16_1.txt > KKOT16_1_analysis_1.txt
+perl KK_cal_seq_anal_11r_neib_int.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt p53_N_1_94.txt KKOT16_2.txt > KKOT16_2_analysis_1.txt
+
+perl MJ_cal_seq_anal_11r_neib_int_merged.pl MJ_original_pot_seq.txt MJ_original_pot.txt MJ_original_pot_eir.txt FLp53.txt DP6_1.txt > DP6_1_analysis_1.txt
+perl MJ_cal_seq_anal_11r_neib_int_merged.pl MJ_original_pot_seq.txt MJ_original_pot.txt MJ_original_pot_eir.txt FLp53.txt DP6_2.txt > DP6_2_analysis_1.txt
+perl MJ_cal_seq_anal_11r_merged.pl MJ_original_pot_seq.txt MJ_original_pot.txt MJ_original_pot_eir.txt FLp53.txt MJOO10_1.txt > MJOO10_1_analysis_1.txt
+perl MJ_cal_seq_anal_11r_merged.pl MJ_original_pot_seq.txt MJ_original_pot.txt MJ_original_pot_eir.txt FLp53.txt MJOO10_2.txt > MJOO10_2_analysis_1.txt
+perl MJ_cal_seq_anal_11r_merged.pl MJ_original_pot_seq.txt MJ_original_pot.txt MJ_original_pot_eir.txt FLp53.txt MJOO16_1.txt > MJOO16_1_analysis_1.txt
+perl MJ_cal_seq_anal_11r_merged.pl MJ_original_pot_seq.txt MJ_original_pot.txt MJ_original_pot_eir.txt FLp53.txt MJOO16_2.txt > MJOO16_2_analysis_1.txt
+perl MJ_cal_seq_anal_11r_neib_int_merged.pl MJ_original_pot_seq.txt MJ_original_pot.txt MJ_original_pot_eir.txt FLp53.txt MJOT10_1.txt > MJOT10_1_analysis_1.txt
+perl MJ_cal_seq_anal_11r_neib_int_merged.pl MJ_original_pot_seq.txt MJ_original_pot.txt MJ_original_pot_eir.txt FLp53.txt MJOT10_2.txt > MJOT10_2_analysis_1.txt
+perl MJ_cal_seq_anal_11r_neib_int_merged.pl MJ_original_pot_seq.txt MJ_original_pot.txt MJ_original_pot_eir.txt FLp53.txt MJOT16_1.txt > MJOT16_1_analysis_1.txt
+perl MJ_cal_seq_anal_11r_neib_int_merged.pl MJ_original_pot_seq.txt MJ_original_pot.txt MJ_original_pot_eir.txt FLp53.txt MJOT16_2.txt > MJOT16_2_analysis_1.txt
+perl KK_cal_seq_anal_11r_merged.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt FLp53.txt KKOO10_1.txt > KKOO10_1_analysis_1.txt
+perl KK_cal_seq_anal_11r_merged.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt FLp53.txt KKOO10_2.txt > KKOO10_2_analysis_1.txt
+perl KK_cal_seq_anal_11r_merged.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt FLp53.txt KKOO16_1.txt > KKOO16_1_analysis_1.txt
+perl KK_cal_seq_anal_11r_merged.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt FLp53.txt KKOO16_2.txt > KKOO16_2_analysis_1.txt
+perl KK_cal_seq_anal_11r_neib_int_merged.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt FLp53.txt KKOT10_1.txt > KKOT10_1_analysis_1.txt
+perl KK_cal_seq_anal_11r_neib_int_merged.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt FLp53.txt KKOT10_2.txt > KKOT10_2_analysis_1.txt
+perl KK_cal_seq_anal_11r_neib_int_merged.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt FLp53.txt KKOT16_1.txt > KKOT16_1_analysis_1.txt
+perl KK_cal_seq_anal_11r_neib_int_merged.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt FLp53.txt KKOT16_2.txt > KKOT16_2_analysis_1.txt
+
+perl MJ_cal_seq_anal_11r_merged.pl MJ_original_pot_seq.txt MJ_original_pot.txt MJ_original_pot_eir.txt FLp53.txt MJOO10.txt > MJOO10_analysis_1.txt
+perl MJ_cal_seq_anal_11r_merged.pl MJ_original_pot_seq.txt MJ_original_pot.txt MJ_original_pot_eir.txt FLp53.txt MJOO16.txt > MJOO16_analysis_1.txt
+perl MJ_cal_seq_anal_11r_neib_int_merged.pl MJ_original_pot_seq.txt MJ_original_pot.txt MJ_original_pot_eir.txt FLp53.txt MJOT10.txt > MJOT10_analysis_1.txt
+perl KK_cal_seq_anal_11r_merged.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt FLp53.txt KKOO10.txt > KKOO10_analysis_1.txt
+perl KK_cal_seq_anal_11r_merged.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt FLp53.txt KKOO16.txt > KKOO16_analysis_1.txt
+perl KK_cal_seq_anal_11r_neib_int_merged.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt FLp53.txt KKOT10.txt > KKOT10_analysis_1.txt
+perl KK_cal_seq_anal_11r_neib_int_merged.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt FLp53.txt KKOT16.txt > KKOT16_analysis_1.txt
+
+perl KK_cal_seq_anal_11r_merged.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt FLp53.txt KKOO10K.txt > KKOO10K_analysis_1.txt
+perl KK_cal_seq_anal_11r_merged.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt FLp53.txt KKOO16K.txt > KKOO16K_analysis_1.txt
+perl KK_cal_seq_anal_11r_neib_int_merged.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt FLp53.txt KKOT10K.txt > KKOT10K_analysis_1.txt
+perl KK_cal_seq_anal_11r_neib_int_merged.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt FLp53.txt KKOT16K.txt > KKOT16K_analysis_1.txt
+
+perl MJ_cal_seq_anal_11r_merged.pl MJ_original_pot_seq.txt MJ_original_pot.txt MJ_original_pot_eir.txt FLp53.txt p53_linker_293_325.txt > p53_linker_293_325_MJOO.txt
+perl MJ_cal_seq_anal_11r_neib_int_merged.pl MJ_original_pot_seq.txt MJ_original_pot.txt MJ_original_pot_eir.txt FLp53.txt p53_linker_293_325.txt > p53_linker_293_325_MJOT.txt
+perl KK_cal_seq_anal_11r_merged.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt FLp53.txt p53_linker_293_325.txt > p53_linker_293_325_KKOO.txt
+perl KK_cal_seq_anal_11r_neib_int_merged.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt FLp53.txt p53_linker_293_325.txt > p53_linker_293_325_KKOT.txt
+
+perl MJ_cal_seq_anal_11r_merged.pl MJ_original_pot_seq.txt MJ_original_pot.txt MJ_original_pot_eir.txt FLp53.txt DP6c.txt > DP6c_MJOO.txt
+perl MJ_cal_seq_anal_11r_neib_int_merged.pl MJ_original_pot_seq.txt MJ_original_pot.txt MJ_original_pot_eir.txt FLp53.txt DP6c.txt > DP6c_MJOT.txt
+perl KK_cal_seq_anal_11r_merged.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt FLp53.txt DP6c.txt > DP6c_KKOO.txt
+perl KK_cal_seq_anal_11r_neib_int_merged.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt FLp53.txt DP6c.txt > DP6c_KKOT.txt
+
+perl MJ_cal_seq_anal_11r_neib_int_merged_scd.pl MJ_original_pot_seq.txt MJ_original_pot.txt MJ_original_pot_eir.txt p53_C_357_393.txt DP6.txt > DP6_scd.txt
+perl MJ_cal_seq_anal_11r_neib_free_merged_scd.pl MJ_original_pot_seq.txt MJ_original_pot.txt MJ_original_pot_eir.txt p53_N_1_94.txt MJOO10.txt > MJOO10_scd.txt
+perl MJ_cal_seq_anal_11r_neib_free_merged_scd.pl MJ_original_pot_seq.txt MJ_original_pot.txt MJ_original_pot_eir.txt p53_N_1_94.txt MJOO16.txt > MJOO16_scd.txt
+perl MJ_cal_seq_anal_11r_neib_int_merged_scd.pl MJ_original_pot_seq.txt MJ_original_pot.txt MJ_original_pot_eir.txt p53_N_1_94.txt MJOT10.txt > MJOT10_scd.txt
+perl KK_cal_seq_anal_11r_neib_free_merged_scd.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt p53_N_1_94.txt KKOO10.txt > KKOO10_scd.txt
+perl KK_cal_seq_anal_11r_neib_free_merged_scd.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt p53_N_1_94.txt KKOO16.txt > KKOO16_scd.txt
+perl KK_cal_seq_anal_11r_neib_int_merged_scd.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt p53_N_1_94.txt KKOT10.txt > KKOT10_scd.txt
+perl KK_cal_seq_anal_11r_neib_int_merged_scd.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt p53_N_1_94.txt KKOT16.txt > KKOT16_scd.txt
+
+#FUS analysis
+perl FUS_anal_neib_int.pl MJ_original_pot_seq.txt MJ_original_pot.txt MJ_original_pot_eir.txt FUS.txt FUS_MJOT16_270.txt > FUS_MJOT16_270_analysis.txt
+perl FUS_anal_neib_int.pl MJ_original_pot_seq.txt MJ_original_pot.txt MJ_original_pot_eir.txt FUS.txt FUS_MJOT16_508.txt > FUS_MJOT16_508_analysis.txt
+perl FUS_anal_neib_int.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt FUS.txt FUS_KKOT16_268.txt > FUS_KKOT16_268_analysis.txt
+perl FUS_anal_neib_int.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt FUS.txt FUS_KKOT16_510.txt > FUS_KKOT16_510_analysis.txt
+
+perl FUS_anal_neib_int_folded.pl MJ_original_pot_seq.txt MJ_original_pot.txt MJ_original_pot_eir.txt FUS.txt FUS_MJOT16_270.txt > FUS_MJOT16_270_analysis_folded.txt
+perl FUS_anal_neib_int_folded.pl MJ_original_pot_seq.txt MJ_original_pot.txt MJ_original_pot_eir.txt FUS.txt FUS_MJOT16_508.txt > FUS_MJOT16_508_analysis_folded.txt
+perl FUS_anal_neib_int_folded.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt FUS.txt FUS_KKOT16_268.txt > FUS_KKOT16_268_analysis_folded.txt
+perl FUS_anal_neib_int_folded.pl MJ_original_pot_seq.txt KK_new_pot.txt KK_new_eir.txt FUS.txt FUS_KKOT16_510.txt > FUS_KKOT16_510_analysis_folded.txt
