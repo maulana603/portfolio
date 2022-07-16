@@ -3,3 +3,5 @@ I wrote the program in Python because Python has more powerful libraries for bio
 
 These are also my first scripts written in Python. I studied by myself to learn OOP concept and Python libraries that used in this code.
 The project was given to my lab's junior because I decided to continue my master in Europe.
+
+Libraries used in the code are Biopython, NumPy, and Scipy. DSSP program (https://swift.cmbi.umcn.nl/gv/dssp/DSSP_3.html) is also needed to calculate the solvent-accessible surface area (SASA).
