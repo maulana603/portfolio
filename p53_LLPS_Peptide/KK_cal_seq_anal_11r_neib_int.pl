@@ -94,14 +94,14 @@ for ($i=1; $i < 21; $i++){
    }
 }
 
-for ($i=1; $i < 21; $i++){
+#for ($i=1; $i < 21; $i++){
   # printf("%s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s\n", $KK_r[$i][1], $KK_r[$i][2], $KK_r[$i][3], $KK_r[$i][4], $KK_r[$i][5], $KK_r[$i][6], $KK_r[$i][7], $KK_r[$i][8], $KK_r[$i][9], $KK_r[$i][10], $KK_r[$i][11], $KK_r[$i][12], $KK_r[$i][13], $KK_r[$i][14], $KK_r[$i][15], $KK_r[$i][16], $KK_r[$i][17], $KK_r[$i][18], $KK_r[$i][19], $KK_r[$i][20]);
   # printf("%s %s %s %s %s %s %s %s %s %s %s\n", $i, $KK[$i][1], $KK[$i][2], $KK[$i][3], $KK[$i][4], $KK[$i][5], $KK[$i][6], $KK[$i][7], $KK[$i][8], $KK[$i][9], $KK[$i][10]);
   # printf("%s %s %s %s %s %s %s %s %s %s %s\n", $i, $KK[$i][11], $KK[$i][12], $KK[$i][13], $KK[$i][14], $KK[$i][15], $KK[$i][16], $KK[$i][17], $KK[$i][18], $KK[$i][19], $KK[$i][20]);
 
   # printf("%s %s %s %s %s %s %s %s %s %s %s\n", $i, $KK_r[$i][1], $KK_r[$i][2], $KK_r[$i][3], $KK_r[$i][4], $KK_r[$i][5], $KK_r[$i][6], $KK_r[$i][7], $KK_r[$i][8], $KK_r[$i][9], $KK_r[$i][10]);
   # printf("%s %s %s %s %s %s %s %s %s %s %s\n", $i, $KK_r[$i][11], $KK_r[$i][12], $KK_r[$i][13], $KK_r[$i][14], $KK_r[$i][15], $KK_r[$i][16], $KK_r[$i][17], $KK_r[$i][18], $KK_r[$i][19], $KK_r[$i][20]);
-}
+#}
 
 #printf("\n");
 
