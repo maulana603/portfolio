@@ -4,3 +4,5 @@ The paper is now in review process. I will attach the paper when it's published.
 The code is written in Perl. I used the Perl because I received the legacy code from my professor. These are my first script that I have written, so it's far from good.
 
 I ran the code using strawberry Perl. I also attached the command to run the code in KK_Logs file. The input and output files are inside the Supporting_Files folder.
+
+The result is published as https://www.nature.com/articles/s41598-022-17829-1.
