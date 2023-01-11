@@ -1,0 +1,3 @@
+QR Code generator website
+
+Self studying how to make dynamic website using flask. It takes a text and convert into QR code. I will deploy it soon. It's already working at localhost.
