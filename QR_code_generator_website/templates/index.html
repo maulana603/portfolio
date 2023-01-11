@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <title>QR Code Generator</title>
+    </head>
+    <body>
+        <form action='/generate' method='POST'>
+            <label for='link'>Link:</label>
+            <input type='text' id='link' name='link' required>
+            <input type='submit' value='Generate QR Code'>
+        </form>
+        <div id='qrcode'></div>
+        <script>
+            function renderQRCode(url) {
+                var qrcode = new QRCode(document.getElementById('qrcode'), {
+                    text: url,
+                    width: 256,
+                    height: 256,
+                    colorDark : "#000000",
+                    colorLight : "#ffffff",
+                    correctLevel : QRCode.CorrectLevel.H
+                });
+            }
+        </script>
+    </body>
+</html>
