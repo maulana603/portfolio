@@ -1,0 +1,29 @@
+Python exercise to build a storage system for a client.
+
+[System explanation]
+a storage service that allows users to store and view files. In the storage service, users can perform the following three operations: "upload and save files", "delete saved files", and "update saved files".
+The fee is the sum of the storage fee, which is determined by the usage of the storage during the month, and the update fee, which is determined by the sum of the file sizes of the updated files during the month.
+This service has a free plan that is available free of charge within the restrictions.
+
+[Input]
+2022-04-03T12:30 UPLOAD storage_A1 filex 2000000 
+2022-04-05T12:30 DELETE storage_B2 targetfile 
+2022-04-06T12:30 UPLOAD storage A2 filey 5
+2022-04-06T12:31 UPLOAD storage_A1 filez 2000000000
+2022-04-10T12:30 DELETE storage_A1 filex
+2022-04-15T12:30 DELETE storage_A2 filey
+2022-05-01T00:00 CALC
+2022-06-01T00:00 CALC
+
+[Output]
+UPLOAD: 20 1 0
+DELETE: this storage location is not available on the free plan
+UPLOAD: 21 2 0
+UPLOAD: free plan fee limit exceeded
+DELETE: 21 3 0
+DELETE: 21 3 0
+CALC: [0000] 21 3 0
+CALC: [0 0 0 0 ] 0 0 0
+
+[Progress]
+Still has some bugs and needs to be fixed.

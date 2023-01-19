@@ -2,81 +2,82 @@ import sys
 import datetime
 import math
 
+#input
+lines = input().splitlines()
 
-def main(lines):
 
-    #read input files
-    commands = []
-    for line in lines:
-        commands.append(line.split(" "))
-    
-    #initialize everything
-    person = client()
-    storage_A1 = storage("storage_A1", "A", 0.01, 0.0005, True)
-    storage_A2 = storage("storage_A2", "A", 0.001, 0.01, True)
-    storage_B1 = storage("storage_B1", "B", 0.01, 0.001, False)
-    storage_B2 = storage("storage_B2", "B", 0.0001, 0.5, False)
-    storages = {"storage_A1" : storage_A1, "storage_A2" : storage_A2, 
-    "storage_B1" : storage_B1, "storage_B2": storage_B2}
-    storages_set = {storage_A1, storage_A2, storage_B1, storage_B2}
+#read input files
+commands = []
+for line in lines:
+    commands.append(line.split(" "))
 
-    #function
-    upload = upload_class()
-    delete = delete_class()
-    update = update_class()
-    agg = aggregates(storages_set)
+#initialize everything
+person = client()
+storage_A1 = storage("storage_A1", "A", 0.01, 0.0005, True)
+storage_A2 = storage("storage_A2", "A", 0.001, 0.01, True)
+storage_B1 = storage("storage_B1", "B", 0.01, 0.001, False)
+storage_B2 = storage("storage_B2", "B", 0.0001, 0.5, False)
+storages = {"storage_A1" : storage_A1, "storage_A2" : storage_A2, 
+"storage_B1" : storage_B1, "storage_B2": storage_B2}
+storages_set = {storage_A1, storage_A2, storage_B1, storage_B2}
 
-    #Put the action
-    for command in commands:
-        if command[1] == "UPLOAD":
-            curr_storage = storages[command[2]]
-            filesize = int(command[4])/1000
-            if upload.validate(curr_storage, person, command[3], filesize):
-                upload.upload_file(curr_storage, command[3], filesize)
-                agg.calculate_overall_fee()
-                print("UPLOAD: {} {} {}".format(
-                    agg.overall_storage_fee, agg.overall_update_fee, agg.overall_usage_fee
-                ))
-            else:
-                print(upload.output) 
+#function
+upload = upload_class()
+delete = delete_class()
+update = update_class()
+agg = aggregates(storages_set)
 
-        if command[1] == "DELETE":
-            curr_storage = storages[command[2]]
-            filesize = int(command[4])/1000
-            if delete.validate(curr_storage, person, command[3]):
-                delete.delete_file(curr_storage, command[3])
-                agg.calculate_overall_fee()
-                print("DELETE: {} {} {}".format(
-                    agg.overall_storage_fee, agg.overall_update_fee, agg.overall_usage_fee
-                ))
-            else:
-                print(delete.output)
-        
-        if command[1] == "UPDATE":
-            curr_storage = storages[command[2]]
-            filesize = int(command[4])/1000
-            if update.validate(curr_storage, person, command[3], filesize):
-                update.upload_file(curr_storage, command[3], filesize)
-                agg.calculate_overall_fee()
-                print("UPDATE: {} {} {}".format(
-                    agg.overall_storage_fee, agg.overall_update_fee, agg.overall_usage_fee
-                ))
-            else:
-                print(update.output)
-
-        if command[1] == "UPGRADE":
-            if person.status is True:
-                print("UPGRADE: user is already on the paid plan")
-            else:
-                person.status = True
-                print("UPGRADE: accepted")
-
-        if command[1] == "CALC":
-            agg.update_month()
-            print(agg.output)
-
+#Put the action
+for command in commands:
+    if command[1] == "UPLOAD":
+        curr_storage = storages[command[2]]
+        filesize = int(command[4])/1000
+        if upload.validate(curr_storage, person, command[3], filesize):
+            upload.upload_file(curr_storage, command[3], filesize)
+            agg.calculate_overall_fee()
+            print("UPLOAD: {} {} {}".format(
+                agg.overall_storage_fee, agg.overall_update_fee, agg.overall_usage_fee
+            ))
         else:
-            pass
+            print(upload.output) 
+
+    if command[1] == "DELETE":
+        curr_storage = storages[command[2]]
+        filesize = int(command[4])/1000
+        if delete.validate(curr_storage, person, command[3]):
+            delete.delete_file(curr_storage, command[3])
+            agg.calculate_overall_fee()
+            print("DELETE: {} {} {}".format(
+                agg.overall_storage_fee, agg.overall_update_fee, agg.overall_usage_fee
+            ))
+        else:
+            print(delete.output)
+    
+    if command[1] == "UPDATE":
+        curr_storage = storages[command[2]]
+        filesize = int(command[4])/1000
+        if update.validate(curr_storage, person, command[3], filesize):
+            update.upload_file(curr_storage, command[3], filesize)
+            agg.calculate_overall_fee()
+            print("UPDATE: {} {} {}".format(
+                agg.overall_storage_fee, agg.overall_update_fee, agg.overall_usage_fee
+            ))
+        else:
+            print(update.output)
+
+    if command[1] == "UPGRADE":
+        if person.status is True:
+            print("UPGRADE: user is already on the paid plan")
+        else:
+            person.status = True
+            print("UPGRADE: accepted")
+
+    if command[1] == "CALC":
+        agg.update_month()
+        print(agg.output)
+
+    else:
+        pass
 
 
 #function to calculate time
