@@ -172,4 +172,4 @@ def play_game_with_gui(board_size = 8):
             else:
                 current_player = player1
 
-play_game_with_gui()
+play_game()
