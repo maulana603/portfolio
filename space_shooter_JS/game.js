@@ -86,6 +86,7 @@ var collisionInterval = setInterval(function () {
         bullets[i].offsetTop < enemies[j].offsetTop + enemies[j].offsetHeight &&
         bullets[i].offsetHeight + bullets[i].offsetTop > enemies[j].offsetTop) {
         document.body.removeChild(enemies[j]);
+        document.body.removeChild(bullets[i]);
         score++;
         scoreElement.innerHTML = 'Score: ' + score;
       }
