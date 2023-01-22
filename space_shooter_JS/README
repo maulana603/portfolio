@@ -1,0 +1,6 @@
+Space Shooter Game. For practicing JavaScript.
+
+Rules and Gameplay:
+To shoot press spacebar
+If you reach 100 points you win
+If enemy reaches bottom of screen you lose
