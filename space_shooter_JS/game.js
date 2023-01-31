@@ -1,15 +1,15 @@
 // Description: This is the JavaScript file for the Space Shooter game. Game made by Maulana Ariefai
 
-/* Display background*/
-var background = document.createElement('img');
-background.src = 'img/background.jpg';
-background.style.position = 'fixed';
-background.style.top = '0';
-background.style.left = '0';
-background.style.width = '100%';
-background.style.height = '100%';
-background.style.zIndex = '-1';
-document.body.appendChild(background);
+// Display background
+var imgBackground = document.createElement('img');
+imgBackground.src = 'img/background.jpg';
+imgBackground.style.position = 'fixed';
+imgBackground.style.top = '0';
+imgBackground.style.left = '0';
+imgBackground.style.width = '100%';
+imgBackground.style.height = '100%';
+imgBackground.style.zIndex = '-1';
+document.body.appendChild(imgBackground);
 
 /* display spaceship*/
 var spaceship = document.createElement('img');
@@ -30,6 +30,7 @@ document.addEventListener('mousemove', function (event) {
 
 /* adding shooting function*/
 document.addEventListener('keydown', function (event) {
+  // If space is pressed, create a bullet
   if (event.keyCode === 32) {
     var bullet = document.createElement('img');
     bullet.src = 'img/bullet.png';
@@ -39,6 +40,7 @@ document.addEventListener('keydown', function (event) {
     document.body.appendChild(bullet);
     var bulletInterval = setInterval(function () {
       bullet.style.top = bullet.offsetTop - 10 + 'px';
+      // If the bullet is off the screen, remove it
       if (bullet.offsetTop < 0) {
         clearInterval(bulletInterval);
         document.body.removeChild(bullet);
@@ -48,6 +50,7 @@ document.addEventListener('keydown', function (event) {
 });
 
 /* adding enemy */
+//create enemy
 var enemyInterval = setInterval(function () {
   var enemy = document.createElement('img');
   enemy.src = 'img/enemy.png';
@@ -55,6 +58,7 @@ var enemyInterval = setInterval(function () {
   enemy.style.top = '0';
   enemy.style.left = Math.random() * window.innerWidth + 'px';
   document.body.appendChild(enemy);
+  //move enemy
   var enemyInterval = setInterval(function () {
     enemy.style.top = enemy.offsetTop + 1 + 'px';
     if (enemy.offsetTop > window.innerHeight) {
@@ -66,6 +70,7 @@ var enemyInterval = setInterval(function () {
 
 
 /* collision and score function */
+//This code will keep track of the score and remove bullets and enemies when they collide
 var score = 0;
 var scoreElement = document.createElement('div');
 scoreElement.style.position = 'fixed';
